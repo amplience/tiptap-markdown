@@ -352,7 +352,7 @@ ${element.innerHTML}
           serialize(state2, node, parent, index) {
             for (let i = index + 1; i < parent.childCount; i++)
               if (parent.child(i).type != node.type) {
-                state2.write(state2.inTable ? HTMLNode.storage.markdown.serialize.call(this, state2, node, parent) : "\n");
+                state2.write(state2.inTable ? HTMLNode.storage.markdown.serialize.call(this, state2, node, parent) : "<br />");
                 return;
               }
           },
