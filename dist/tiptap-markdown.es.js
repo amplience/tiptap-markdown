@@ -354,7 +354,7 @@ const HardBreak$1 = HardBreak.extend({
         serialize(state, node, parent, index) {
           for (let i = index + 1; i < parent.childCount; i++)
             if (parent.child(i).type != node.type) {
-              state.write(state.inTable ? HTMLNode.storage.markdown.serialize.call(this, state, node, parent) : "<br />");
+              state.write(state.inTable ? HTMLNode.storage.markdown.serialize.call(this, state, node, parent) : "\\\n");
               return;
             }
         },
